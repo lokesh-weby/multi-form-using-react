@@ -435,7 +435,7 @@ var [monthAcrade,setAcrade]=useState(9);
       </div>
       <div className='services'>
             <p>Total (per {plan})</p>
-            <h3 className='text-primary my-5'>+${price+ts1+ts2+ts3}/{duration}</h3>
+            <h3 className='text-primary my-5'>+${price}/{duration}</h3>
           </div>
       <div className='btn-wrapper mt-4'>
       <button className='pre-btn' onClick={pre_page}>Go Back</button>
