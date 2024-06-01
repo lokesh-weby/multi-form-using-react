@@ -102,9 +102,11 @@ var [monthAcrade,setAcrade]=useState(9);
   var [storage,setStoreage]=useState(2);
   var [profile,setProfile]=useState(2);
   var [plan,setPlan]=useState("Monthly");
+   var [offer,setOffer]=useState("");
 
   const handle=(e)=>{
     if(e.target.checked===true){
+     setOffer("2 Months free")
       setAcrade(90)
       setAdvance(120)
       setMonthPro(150)
@@ -114,6 +116,7 @@ var [monthAcrade,setAcrade]=useState(9);
       setProfile(20)
       setPlan("Yearly")
     }else{
+     setOffer("")
       setAcrade(9)
       setAdvance(12)
       setMonthPro(15)
@@ -254,6 +257,7 @@ var [monthAcrade,setAcrade]=useState(9);
             </div>
             <h6>Arcade</h6>
             <p>${monthAcrade}/{duration}</p>
+            <h6>{offer}</h6>
           </label>
           <input type='radio' id='advance' name='plan' value='advance' onClick={planSection}/>
           <label className='plan' htmlFor='advance' >
@@ -261,6 +265,7 @@ var [monthAcrade,setAcrade]=useState(9);
           </div>
           <h6>Advanced</h6>
             <p>${monthAdvance}/{duration}</p>
+                <h6>{offer}</h6>
           </label>
           <input type='radio' id='pro' name='plan' value='pro' onClick={planSection}/>
 
@@ -269,6 +274,7 @@ var [monthAcrade,setAcrade]=useState(9);
           </div>
           <h6>pro</h6>
             <p>${monthPro}/{duration}</p>
+               <h6>{offer}</h6>
           </label>
         </div>
         <div className='toggle_contain'>
