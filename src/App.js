@@ -42,24 +42,24 @@ function App(){
   const [s1,setS1]=useState('')
   const [s2,setS2]=useState('')
   const[s3,setS3]=useState('')
- const [ts1,setTs1]=useState(0)
-  const [ts2,seTs2]=useState(0)
-  const[ts3,setTs3]=useState(0)
+  const [t1,setT1]=useState(0)
+  const [t2,setT2]=useState(0)
+  const[t3,setT3]=useState(0)
   const picks=(e)=>{
     if(e.target.value==="Online service"){
       setOnline(e.target.value)
       setS1("+$"+services+"/"+duration) 
-     setTs1(services)
+     setT1(services)
     }
     else if(e.target.value==="Larger Storage"){
       setStore(e.target.value)
       setS2("+$"+storage+"/"+duration)
-       setTs2(storage)
+       setT2(storage)
     }
     else if(e.target.value==="Customizable"){
       setCustom(e.target.value)
       setS3("+$"+profile+"/"+duration)
-     setTs1(profile)
+     setT3(profile)
     }
     else{
       setOnline('')
@@ -435,7 +435,7 @@ var [monthAcrade,setAcrade]=useState(9);
       </div>
       <div className='services'>
             <p>Total (per {plan})</p>
-            <h3 className='text-primary my-5'>+${price}/{duration}</h3>
+            <h3 className='text-primary my-5'>+${price+t1+t2+t3}/{duration}</h3>
           </div>
       <div className='btn-wrapper mt-4'>
       <button className='pre-btn' onClick={pre_page}>Go Back</button>
