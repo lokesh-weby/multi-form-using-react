@@ -42,9 +42,9 @@ function App(){
   const [s1,setS1]=useState('')
   const [s2,setS2]=useState('')
   const[s3,setS3]=useState('')
- const [ts1,setTs1]=useState()
-  const [ts2,seTs2]=useState()
-  const[ts3,setTs3]=useState()
+ const [ts1,setTs1]=useState(0)
+  const [ts2,seTs2]=useState(0)
+  const[ts3,setTs3]=useState(0)
   const picks=(e)=>{
     if(e.target.value==="Online service"){
       setOnline(e.target.value)
