@@ -42,18 +42,24 @@ function App(){
   const [s1,setS1]=useState('')
   const [s2,setS2]=useState('')
   const[s3,setS3]=useState('')
+ const [ts1,setTs1]=useState()
+  const [ts2,seTs2]=useState()
+  const[ts3,setTs3]=useState()
   const picks=(e)=>{
     if(e.target.value==="Online service"){
       setOnline(e.target.value)
-      setS1("+$"+services+"/"+duration)
+      setS1("+$"+services+"/"+duration) 
+     setTs1(services)
     }
     else if(e.target.value==="Larger Storage"){
       setStore(e.target.value)
       setS2("+$"+storage+"/"+duration)
+       setTs2(storage)
     }
     else if(e.target.value==="Customizable"){
       setCustom(e.target.value)
       setS3("+$"+profile+"/"+duration)
+     setTs1(profile)
     }
     else{
       setOnline('')
@@ -429,7 +435,7 @@ var [monthAcrade,setAcrade]=useState(9);
       </div>
       <div className='services'>
             <p>Total (per {plan})</p>
-            <h3 className='text-primary my-5'>+${price +services+storage}/{duration}</h3>
+            <h3 className='text-primary my-5'>+${price+ts1+ts2+ts3}/{duration}</h3>
           </div>
       <div className='btn-wrapper mt-4'>
       <button className='pre-btn' onClick={pre_page}>Go Back</button>
