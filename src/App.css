@@ -15,6 +15,10 @@ form p{
     margin: unset;
     color: red;
 }
+.plan h6{
+    margin: unset;
+    font-size:smaller;
+}
 
 :root{
     --darkblue:#032859;
